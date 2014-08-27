@@ -172,60 +172,73 @@
 
   <div class="name">Happy birthday!<br />cyy</div>
 
-  <a href="javascript:void(0)" class="btn">点我点我</a>
+  <a href="javascript:void(0)" class="btn hide">点我点我</a>
 </div>
 
 <div class="dance-wrap hide">
-    <div class="act">
-     (•_• )
-    &lt;)   )╯
-     /    \
-     <p>~happy birthday~</p>
-    </div>
+<div class="act-wrap">
+<div class="act">
+（•_• ）
+&lt;（   ）╯
+ /   \
+<p>~happy birthday to cyy~</p>
+</div>
 
-    <div class="act" style="display:none">
-      ( •_•)
-     \(   (&gt;
-      /    \
-     <p>~happy birthday~</p>
-    </div>
+<div class="act" style="display:none">
+（ •_•）
+\（   ）&gt;
+ /   \
+<p>~happy birthday to cyy~</p>
+</div>
 
-    <div class="act" style="display:none">
-      ( •_-)
-     \(   (&gt;
-      /    \
-     <p>~happy birthday~</p>
-    </div>
+<div class="act" style="display:none">
+（ •_-）
+\（   ）&gt;
+ /   \
+<p>~happy birthday to cyy~</p>
+</div>
 
-    <div class="act" style="display:none">
-      ( •_•)
-     ~(   )~
-      /    \
-     <p>~happy birthday~</p>
-    </div>
+<div class="act" style="display:none">
+（ •_•）
+~（   ）~
+ /   \
+<p>~happy birthday to cyy~</p>
+</div>
 
-    <div class="act" style="display:none">
-      ( •_•)
-     &lt;(   )&gt;
-      /    \
-     <p>~happy birthday~</p>
-    </div>
+<div class="act" style="display:none">
+（ •_•）
+&lt;（   ）&gt;
+ /   \
+<p>~happy birthday to cyy~</p>
+</div>
+</div>
+<a href="javascript:void(0)" class="again">replay</a>
 </div>
 
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
   function ran(){
-    return Math.round(Math.random() * 250) + 250;
+    return Math.round(Math.random() * 10);
   }
   function dance(){
     $('.act').hide();
     $('.act').eq((ran())%$('.act').length).show();
   }
+
   $('.btn').click(function(){
     $('.dance-wrap').removeClass('hide');
     $('.welcome-wrap').addClass('hide');
     setInterval(function(){dance()},300);
   });
+
+  $('.again').click(function(){
+  	console.log(1);
+  	location.reload();
+  });
+
+  setTimeout(function(){
+  	$('.btn').removeClass('hide').addClass('bounce');
+  },6000);
 </script>
 </body>
 </html>
