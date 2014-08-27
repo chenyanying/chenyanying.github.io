@@ -20,8 +20,8 @@ body{margin: 0;background-color: #ee9ca7;height: 100%;width: 100%;padding-top: 3
 
 .name{color: #8b6a60; font-family: 'Lato', sans-serif; font-weight: 300; font-style: italic;
 text-align: center;font-weight: normal;text-align: center;margin: 0;line-height: 22px;font-size: 24px;color: #e74c3c;
-  -webkit-animation: rubberBand 1s 6.5s linear 1;
-  animation: rubberBand 1s 6.5s linear 1;}
+  -webkit-animation: rubberBand 1.5s 0s ease-in 1;
+  animation: rubberBand 1.5s 0s ease-in 1;}
 
 /* ============================================== Candle
 */
