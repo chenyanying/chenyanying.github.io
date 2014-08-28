@@ -37,7 +37,7 @@ text-align: center;font-weight: normal;text-align: center;margin: 0;line-height:
 .again,
 .btn{display: inline-block;text-align: center;width: 80px;height: 30px;line-height: 30px;color: #fff;margin-top: 30px;
     border-radius: 6px;background-color: #1abc9c;text-decoration: none;font-size: 14px;cursor: pointer;}
-.again{margin-top:0;position:absolute;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);z-index: 9999;}
+.again{margin-top:10px;position:absolute;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);z-index: 9999;}
 .again:hover,
 .btn:hover{background-color: #16a085;}
 /* ============================================== Candle
