@@ -162,12 +162,12 @@ $('.hook').bind('click',function (e) {
 		detail_screen_width = 0;
 	}
 });
-$('.btn-share').bind('touchend',function(e) {
+$('.btn-share').bind('touchstart',function(e) {
 	$('#share-wrap').removeClass('hide');
 });
-$('#share-wrap').bind('touchend',function(e) {
+$('#share-wrap').bind('touchstart',function(e) {
 	$('#share-wrap').addClass('hide');
 });
-$('#detail-wrap .close').bind('touchend',function(e) {
+$('#detail-wrap .close').bind('touchstart',function(e) {
 	$('#detail-wrap').addClass('detail-wrap-hide');
 });
