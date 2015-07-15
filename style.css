@@ -418,8 +418,8 @@ b{
 
 .threelight1{background-image: url(img/threelight-off.png);}
 .threelight2{
-	-webkit-animation:light 2.5s ease-in-out infinite;
-	animation:light 2.5s ease-in-out infinite;
+	-webkit-animation:light 2s ease-in-out infinite;
+	animation:light 2s ease-in-out infinite;
 	background-image: url(img/threelight-on.png);}
 
 @-webkit-keyframes light{

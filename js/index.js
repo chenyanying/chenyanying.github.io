@@ -109,6 +109,7 @@ var MyLoadImage = new LoadImage({
 		'img/detail-wallhd.png',
 		'img/detail-close.png',
 		'img/detail-light.png',
+		'img/detail-lightbar.png',
 		'img/share-arrow.png'
 		]
 });
