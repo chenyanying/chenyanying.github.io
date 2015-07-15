@@ -121,7 +121,7 @@ document.getElementById('audio').play();
 // 翻页效果
 $('#swipe').bind('touchstart', function(e) {
 	start_pos = e.touches[0].clientX;
-	if(start_pos>0||start_pos<screen_width){e.preventDefault();return;}
+	if(start_pos>0||start_pos<screen_width){return;}
 });
 $('#swipe').bind('touchmove', function(e) {
 	move_pos = e.touches[0].clientX - start_pos + end_pos;
