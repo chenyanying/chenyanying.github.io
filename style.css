@@ -376,12 +376,24 @@ b{
     z-index: 3;
 }
 
-.light{
-	width: 126px;
-	height: 66px;
-	background-image: url(img/light.png);
-	top: 60px;
-    left: 1255px;
+.firstlightbar{
+	width: 134px;
+	height: 68px;
+	background-image: url(img/firstlightbar.png);
+	top: 62px;
+    left: 1263px;
+    z-index: 2;
+}
+
+.firstlight{
+	width: 134px;
+	height: 68px;
+	background-image: url(img/firstlight.png);
+	top: 62px;
+    left: 1263px;
+    z-index: 1;
+    -webkit-animation:light 3s ease-in-out infinite;
+	animation:light 3s ease-in-out infinite;
 }
 
 .stone{
