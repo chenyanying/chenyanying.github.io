@@ -139,7 +139,7 @@ $('#swipe').bind('touchend', function(e) {
 // 大图浮层
 $('#detail-wrap').bind('touchstart', function(e) {
 	detail_start_pos = e.touches[0].clientY;
-	if(detail_start_pos>0||detail_start_pos<detail_screen_width){e.preventDefault();return;}
+	if(detail_start_pos>0||detail_start_pos<detail_screen_width){return;}
 });
 $('#detail-wrap').bind('touchmove', function(e) {
 	detail_move_pos = e.touches[0].clientY - detail_start_pos + detail_end_pos;
@@ -157,8 +157,10 @@ $('#detail-wrap').bind('touchend', function(e) {
 // btn
 $('.hook').bind('click',function (e) {
 	$('#detail-wrap').removeClass('detail-wrap-hide');
+	// 大图浮层动画0.9变1，因此高度要补回去10/9和误差
+	var wraph = $('#detail-wrap').height()*10/9 + 10;
 	var h = $(window).height();
-	var dh = $('#detail-wrap').height()-h;
+	var dh = wraph-h;
 	if(dh>0){
 		detail_screen_width = -Math.floor(dh);
 	}
