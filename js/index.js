@@ -106,6 +106,9 @@ var MyLoadImage = new LoadImage({
 		'img/stairtips2.png',
 		'img/stone.png',
 		'img/share-tips.png',
+		'img/detail-wallhd.png',
+		'img/detail-close.png',
+		'img/detail-light.png',
 		'img/share-arrow.png'
 		]
 });
