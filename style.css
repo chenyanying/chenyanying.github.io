@@ -28,6 +28,7 @@ body{
 	background: linear-gradient( top,#999,#ddd);
 	position: relative;
 	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
 }
 
 .hide{
@@ -143,8 +144,8 @@ b{
 	left: -20px;
 	top: 0;
 	background-repeat: repeat-x;
-	-webkit-animation:bgtop 3s 0s linear infinite alternate;
-	animation:bgtop 3s 0s linear infinite alternate;
+	-webkit-animation:bgtop 5s 0s linear infinite alternate;
+	animation:bgtop 5s 0s linear infinite alternate;
 }
 
 @-webkit-keyframes bgtop{
@@ -222,7 +223,7 @@ b{
 }
 
 .b7{
-	background-image: url(http://i1.tietuku.com/8ccbea8aed5821fb.png);
+	background-image: url(http://i3.tietuku.com/cc818763c5af3c33.png);
 	width: 360px;
 	height: 536px;
 	left: 2479px;
@@ -267,6 +268,7 @@ b{
 	width: 7px;
 	height: 12px;
 	-webkit-animation:arrow 1s 0s linear infinite;
+	animation:arrow 1s 0s linear infinite;
 }
 
 .arrow .arrowout{
@@ -284,38 +286,67 @@ b{
 	top: 104px;
     left: 1268px;
     -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 .arrow3{
 	top: 118px;
     left: 1505px;
     -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 .arrow4{
 	top: 224px;
     left: 1985px;
     -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 .arrow5{
 	top: 224px;
     left: 2190px;
     -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 .arrow6{
 	top: 50px;
     left: 2261px;
     -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 .arrow7{
 	top: 360px;
     left: 2674px;
     -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 .arrow8{
 	top: 189px;
     left: 2886px;
 }
 
+.goright{
+	width: 44px;
+	height: 29px;
+	background-image: url(img/goright.png);
+	left: 138px;
+    top: 430px;
+	-webkit-animation:arrow 1s 0s linear infinite;
+	animation:arrow 1s 0s linear infinite;
+}
+
 @-webkit-keyframes arrow{
+	0%{
+		opacity: 0;
+		-webkit-transform:translate3d(0,0,0);
+		transform:translate3d(0,0,0);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform:translate3d(7px,0,0);
+		transform:translate3d(7px,0,0);
+	}
+}
+
+@keyframes arrow{
 	0%{
 		opacity: 0;
 		-webkit-transform:translate3d(0,0,0);
@@ -371,9 +402,39 @@ b{
 }
 
 .endlight1{background-image: url(img/lightoff.png);}
-.endlight2{-webkit-animation:light 1s ease-in-out infinite;background-image: url(img/lighton.png);}
+.endlight2{
+	-webkit-animation:light 1s ease-in-out infinite;
+	animation:light 1s ease-in-out infinite;
+	background-image: url(img/lighton.png);}
+
+.threelight1,
+.threelight2{
+	width: 109px;
+	height: 182px;
+	left: 2530px;
+	top: 31px;
+    z-index: 5;
+}
+
+.threelight1{background-image: url(img/threelight-off.png);}
+.threelight2{
+	-webkit-animation:light 2.5s ease-in-out infinite;
+	animation:light 2.5s ease-in-out infinite;
+	background-image: url(img/threelight-on.png);}
 
 @-webkit-keyframes light{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes light{
 	0%{
 		opacity: 0;
 	}
@@ -536,6 +597,7 @@ b{
 	background-color: #dfdfdf;
 	z-index: 77;
 	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
 	-webkit-transform:translateY(0);
 	transform:translateY(0);
 }
@@ -552,16 +614,20 @@ b{
 	z-index: 99;
 }
 
+#detail-wrap .lightbar,
 #detail-wrap .light{
 	width: 148px;
 	height: 245px;
-	background-image: url(img/detail-light.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	position: absolute;
 	left: 23px;
 	top: 0;
 }
+#detail-wrap .lightbar{background-image: url(img/detail-lightbar.png);z-index: 2;}
+#detail-wrap .light{background-image: url(img/detail-light.png);z-index: 1;left: 0px;width: 171px;
+	-webkit-animation:light 2s ease-in-out infinite alternate;
+	animation:light 2s ease-in-out infinite alternate;}
 
 #detail-wrap .img{
 	display: block;

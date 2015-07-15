@@ -95,7 +95,7 @@ var MyLoadImage = new LoadImage({
 		'http://i1.tietuku.com/8698aa6c2a63ce73.png',
 		'http://i3.tietuku.com/bd11b94a67a038ac.png',
 		'http://i1.tietuku.com/a46c7aa6ec2cb305.png',
-		'http://i1.tietuku.com/8ccbea8aed5821fb.png',
+		'http://i3.tietuku.com/cc818763c5af3c33.png',
 		'http://i1.tietuku.com/71db5a14460f8e97.png',
 		'http://i1.tietuku.com/f46b17a581bc4b17.png',
 		'http://i1.tietuku.com/ec4a04af9ed8b6a5.png',
