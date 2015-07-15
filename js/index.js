@@ -121,33 +121,37 @@ document.getElementById('audio').play();
 // 翻页效果
 $('#swipe').bind('touchstart', function(e) {
 	start_pos = e.touches[0].clientX;
-	if(start_pos>0||start_pos<screen_width){return;}
+	if(start_pos>0||start_pos<screen_width){e.preventDefault();return;}
 });
 $('#swipe').bind('touchmove', function(e) {
 	move_pos = e.touches[0].clientX - start_pos + end_pos;
-	if(move_pos>0||move_pos<screen_width){return;}
+	if(move_pos>0||move_pos<screen_width){e.preventDefault();return;}
 	$(this)[0].style.webkitTransform = "translateX("+move_pos+"px)";
 });
 $('#swipe').bind('touchend', function(e) {
 	if(move_pos>0){end_pos = 0;return;}
-	if(move_pos<screen_width){end_pos = screen_width;return;}
-	end_pos = move_pos;
+	else if(move_pos<screen_width){end_pos = screen_width;return;}
+	else{
+		end_pos = move_pos;
+	}
 });
 
 // 大图浮层
 $('#detail-wrap').bind('touchstart', function(e) {
 	detail_start_pos = e.touches[0].clientY;
-	if(detail_start_pos>0||detail_start_pos<detail_screen_width){return;}
+	if(detail_start_pos>0||detail_start_pos<detail_screen_width){e.preventDefault();return;}
 });
 $('#detail-wrap').bind('touchmove', function(e) {
 	detail_move_pos = e.touches[0].clientY - detail_start_pos + detail_end_pos;
-	if(detail_move_pos>0||detail_move_pos<detail_screen_width){return;}
+	if(detail_move_pos>0||detail_move_pos<detail_screen_width){e.preventDefault();return;}
 	$(this)[0].style.webkitTransform = "translateY("+detail_move_pos+"px)";
 });
 $('#detail-wrap').bind('touchend', function(e) {
 	if(detail_move_pos>0){detail_end_pos = 0;return;}
-	if(detail_move_pos<detail_screen_width){detail_end_pos = detail_screen_width;return;}
-	detail_end_pos = detail_move_pos;
+	else if(detail_move_pos<detail_screen_width){detail_end_pos = detail_screen_width;return;}
+	else{
+		detail_end_pos = detail_move_pos;
+	}
 });
 
 // btn
