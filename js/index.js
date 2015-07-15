@@ -99,7 +99,8 @@ var MyLoadImage = new LoadImage({
 		'http://i1.tietuku.com/71db5a14460f8e97.png',
 		'http://i1.tietuku.com/f46b17a581bc4b17.png',
 		'http://i1.tietuku.com/ec4a04af9ed8b6a5.png',
-		'img/light.png',
+		'img/firstlight.png',
+		'img/firstlightbar.png',
 		'img/lightoff.png',
 		'img/lighton.png',
 		'img/stairtips.png',
@@ -114,7 +115,6 @@ var MyLoadImage = new LoadImage({
 		]
 });
 
-
 // 翻页效果
 $('#swipe').bind('touchstart', function(e) {
 	start_pos = e.touches[0].clientX;
@@ -123,7 +123,7 @@ $('#swipe').bind('touchstart', function(e) {
 $('#swipe').bind('touchmove', function(e) {
 	move_pos = e.touches[0].clientX - start_pos + end_pos;
 	if(move_pos>0||move_pos<screen_width){return;}
-	$(this)[0].style.webkitTransform = "translateX("+move_pos+"px)";
+	$(this)[0].style.webkitTransform = "translate3d("+move_pos+"px,0,0)";
 });
 $('#swipe').bind('touchend', function(e) {
 	if(move_pos>0){end_pos = 0;return;}
@@ -139,7 +139,7 @@ $('#detail-wrap').bind('touchstart', function(e) {
 $('#detail-wrap').bind('touchmove', function(e) {
 	detail_move_pos = e.touches[0].clientY - detail_start_pos + detail_end_pos;
 	if(detail_move_pos>0||detail_move_pos<detail_screen_width){return;}
-	$(this)[0].style.webkitTransform = "translateY("+detail_move_pos+"px)";
+	$(this)[0].style.webkitTransform = "translate3d(0,"+detail_move_pos+"px,0)";
 });
 $('#detail-wrap').bind('touchend', function(e) {
 	if(detail_move_pos>0){detail_end_pos = 0;return;}
@@ -149,7 +149,7 @@ $('#detail-wrap').bind('touchend', function(e) {
 
 // btn
 $('.hook').bind('click',function (e) {
-	$('#detail-wrap').removeClass('hide');
+	$('#detail-wrap').removeClass('detail-wrap-hide');
 	var h = $(window).height();
 	var dh = $('#detail-wrap').height()-h;
 	if(dh>0){
@@ -166,5 +166,5 @@ $('#share-wrap').bind('touchend',function(e) {
 	$('#share-wrap').addClass('hide');
 });
 $('#detail-wrap .close').bind('touchend',function(e) {
-	$('#detail-wrap').addClass('hide');
+	$('#detail-wrap').addClass('detail-wrap-hide');
 });
