@@ -115,6 +115,9 @@ var MyLoadImage = new LoadImage({
 		]
 });
 
+// 音频播放
+document.getElementById('audio').play();
+
 // 翻页效果
 $('#swipe').bind('touchstart', function(e) {
 	start_pos = e.touches[0].clientX;
@@ -123,7 +126,7 @@ $('#swipe').bind('touchstart', function(e) {
 $('#swipe').bind('touchmove', function(e) {
 	move_pos = e.touches[0].clientX - start_pos + end_pos;
 	if(move_pos>0||move_pos<screen_width){return;}
-	$(this)[0].style.webkitTransform = "translate3d("+move_pos+"px,0,0)";
+	$(this)[0].style.webkitTransform = "translateX("+move_pos+"px)";
 });
 $('#swipe').bind('touchend', function(e) {
 	if(move_pos>0){end_pos = 0;return;}
@@ -139,7 +142,7 @@ $('#detail-wrap').bind('touchstart', function(e) {
 $('#detail-wrap').bind('touchmove', function(e) {
 	detail_move_pos = e.touches[0].clientY - detail_start_pos + detail_end_pos;
 	if(detail_move_pos>0||detail_move_pos<detail_screen_width){return;}
-	$(this)[0].style.webkitTransform = "translate3d(0,"+detail_move_pos+"px,0)";
+	$(this)[0].style.webkitTransform = "translateY("+detail_move_pos+"px)";
 });
 $('#detail-wrap').bind('touchend', function(e) {
 	if(detail_move_pos>0){detail_end_pos = 0;return;}
